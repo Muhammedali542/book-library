@@ -1,23 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
-import Card from "./Card";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Main() {
   const [search, setSearch] = useState("");
-  const [bookData, setData] = useState([]);
-  const searchBook = (evt) => {
-    if (evt.key === "Enter") {
-      console.log("Searching for:", search);
+  const navigate = useNavigate();
 
-      axios
-        .get(
-          `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
-            search
-          )}&key=AIzaSyCaCTlAJDzbkf382iXc_KfrxVro3CoHjxk` + "&maxResults=40"
-        )
-        .then((res) => setData(res.data.items))
-        .catch((err) => console.error("Error fetching data:", err));
+  const handleSearch = () => {
+    if (search.trim()) {
+      navigate("/results", { state: { searchQuery: search } });
     }
   };
 
@@ -39,16 +30,14 @@ function Main() {
               placeholder="Enter your Book Name"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              onKeyPress={searchBook}
+              onKeyPress={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button>
-              <i class="fa-solid fa-magnifying-glass"></i>
+            <button onClick={handleSearch}>
+              <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </div>
       </div>
-
-      <div className="container">{<Card book={bookData} />}</div>
     </>
   );
 }

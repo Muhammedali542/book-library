@@ -8,10 +8,10 @@
 }
 
 :root {
-  --primary-color: #caaa87; /* Modern vibrant green */
-  --secondary-color: #f1f1f1; /* Light grey background */
-  --font-color: #333333; /* Dark text for contrast */
-  --accent-color: #ff4081; /* Soft vibrant accent color (pinkish) */
+  --primary-color: #caaa87; 
+  --secondary-color: #f1f1f1; 
+  --font-color: #333333;
+  --accent-color: #ff4081; 
 }
 
 body {
@@ -40,11 +40,27 @@ html {
   z-index: 100;
 }
 
-.navbar .logo a {
-  font-size: 4rem;
-  color: var(--secondary-color);
+.logo {
+  font-family: "Bodoni Moda", serif;
+  font-size: 2.5em;
   font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  letter-spacing: 3px;
+}
+
+.logo a:hover {
+  color: #e94e77;
+  transform: scale(1.1);
 }
 
 .nav-links {
@@ -76,27 +92,27 @@ html {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: row;
-    justify-content: center;
-    width: auto;
-    position: relative;
-    box-shadow: none;
+  /* Make the logo smaller on mobile */
+  .logo {
+    font-size: 1.8em; /* Adjust size of logo */
   }
 
-  .menu-toggle {
-    display: block;
+  .navbar {
+    flex-direction: column; /* Stack the logo and nav items vertically */
+    align-items: center; /* Center the content */
+    height: auto; /* Adjust height to auto */
+    padding: 10px;
   }
 
-  /* Mobile nav links */
   .nav-links {
-    flex-direction: row;
+    flex-direction: column; /* Stack nav links vertically on mobile */
     background-color: var(--primary-color);
     position: absolute;
     top: 92px;
     width: 100%;
     left: 0;
     display: none;
+    text-align: center; /* Center the nav links */
   }
 
   .nav-links.active {
@@ -104,14 +120,21 @@ html {
   }
 
   .nav-links li {
-    margin-left: 20px;
-    margin-top: 0;
+    margin-left: 0;
+    margin-top: 10px;
   }
 
   .nav-links a {
-    font-size: 20px;
-    color: var(--secondary-color);
+    font-size: 18px; /* Adjust font size of nav items */
     padding: 10px 20px;
+  }
+
+  /* Show menu toggle button */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
   }
 
   .nav-links a:hover {
@@ -394,6 +417,31 @@ html {
   text-align: center;
 }
 
+
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;  /* Ensures h3 is on top and social icons are below */
+  align-items: center;     /* Centers the content */
+  justify-content: flex-start; 
+  gap: 13px;
+}
+
+.footer-social h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-family: "Bodoni Moda", serif;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Centers the icons horizontally */
+}
+
+
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -476,5 +524,84 @@ html {
   .footer-links,
   .footer-social {
     text-align: center;
+  }
+}
+
+/* General Styles for About Page */
+.about {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.about-header h1 {
+  font-size: 3rem; /* Larger font size for header */
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.about-content {
+  max-width: 800px; /* Limit content width for better readability */
+}
+
+.about-content p {
+  font-size: 1.5rem; /* Larger font size for paragraphs */
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.about-content ul {
+  margin: 0 auto; /* Center the list */
+  list-style-type: disc;
+  padding-left: 2rem;
+  color: #555;
+}
+
+.about-content ul li {
+  font-size: 1.3rem; /* Larger font size for list items */
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about {
+    padding: 1.5rem;
+  }
+
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+  }
+
+  .about-content ul li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .about-content ul li {
+    font-size: 0.9rem;
   }
 }

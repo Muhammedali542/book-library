@@ -24,7 +24,7 @@ function Modal({ show, item, onClose }) {
                 <span>{item.volumeInfo.publishedDate}</span>
               </h4>
               <br />
-              <a href={item.volumeInfo.previewLink}>
+              <a href={item.volumeInfo.previewLink} target="_blank">
                 <button>More</button>
               </a>
             </div>

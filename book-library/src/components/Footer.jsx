@@ -30,16 +30,32 @@ function Footer() {
           <div class="footer-social">
             <h3>Follow Us</h3>
             <div class="social-icons">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://x.com/home"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/feed/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
