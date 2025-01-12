@@ -45,7 +45,6 @@ function Main() {
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
-          <img src="./images/bg2.png" alt="" />
         </div>
       </div>
 
