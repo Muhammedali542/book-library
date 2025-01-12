@@ -31,28 +31,28 @@ function Footer() {
             <h3>Follow Us</h3>
             <div class="social-icons">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/profile.php?id=100008001738850"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a
-                href="https://x.com/home"
+                href="https://x.com/mohamed35588"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="fab fa-twitter"></i>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/muhamed_ahmed14/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="fab fa-instagram"></i>
               </a>
               <a
-                href="https://www.linkedin.com/feed/"
+                href="https://www.linkedin.com/in/muhamed-ali-b51605224/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
