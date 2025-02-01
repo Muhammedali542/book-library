@@ -30,7 +30,7 @@ function Main() {
               placeholder="Enter your Book Name"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
             <button onClick={handleSearch}>
               <i className="fa-solid fa-magnifying-glass"></i>
